@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 3600" preserveAspectRatio="none">
+  <defs>
+    <filter id="soften" x="-30%" y="-15%" width="160%" height="130%">
+      <feGaussianBlur stdDeviation="100"/>
+    </filter>
+  </defs>
+  <path d="M1600-200C1350 650 300 750-160 1700S500 2950 1600 3800" fill="none" stroke="#cfe2f2" stroke-linecap="round" stroke-width="420" opacity=".72" filter="url(#soften)"/>
+</svg>

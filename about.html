@@ -5,76 +5,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learn about Curry Consulting Services' collaborative approach, mission, values, and founder.">
     <title>About | Curry Consulting Services</title>
-    <link rel="icon" type="image/png" href="favicon.png?v=2">
+    <link rel="icon" type="image/svg+xml" href="brand-mark.svg">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="site-header">
         <a class="brand" href="index.html#home" aria-label="Curry Consulting Services home">
-            <img src="squarespace/old_HOME_files/Curry+Consulting+logo_LUSITANA_4_to_3_Ratio.png" alt="Curry Consulting Services">
+            <img class="brand-mark" src="brand-mark.svg" alt="">
+            <span class="brand-wordmark">
+                <span class="brand-name">Curry Consulting Services</span>
+                <span class="brand-descriptor">Digital systems &amp; software</span>
+            </span>
         </a>
         <nav class="site-nav" aria-label="Main navigation">
             <a href="index.html#home">Home</a>
-            <a href="about.html" aria-current="page">About</a>
             <a href="solutions.html">Solutions</a>
-            <a href="contact.html">Contact</a>
+            <a href="about.html" aria-current="page">About</a>
+            <a class="nav-contact" href="contact.html">Contact</a>
         </nav>
     </header>
 
     <main>
-        <section class="hero about-hero">
-            <div class="hero-content">
-                <h1>Who We Are</h1>
-                <p>We help businesses <strong>streamline operations and unlock insights</strong>. Specializing in leading-edge technology, we design <strong>custom applications, automations, and dashboards that save time, reduce complexity, and drive smarter decisions.</strong></p>
-                <p><strong>The idea is simple:</strong> deliver practical, scalable solutions that give organizations the structure and efficiency they need to grow with confidence.</p>
+        <section class="about-info" aria-label="Our company">
+            <div class="about-tablist" role="tablist" aria-label="Learn about Curry Consulting Services">
+                <button class="about-tab" id="tab-approach" type="button" role="tab" aria-selected="true" aria-controls="panel-approach" tabindex="0">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m3 12 4-4 4 2 3-2 7 4-2 4-5-2-3 2-4-2-4 2-2-4Zm4-4V5l4-2 4 2v3M7 16l2 2m4-2 3 2"/></svg>
+                    <span>Our Approach</span>
+                </button>
+                <button class="about-tab" id="tab-mission" type="button" role="tab" aria-selected="false" aria-controls="panel-mission" tabindex="-1">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="m14 10 6-6M17 4h3v3"/></svg>
+                    <span>Our Mission</span>
+                </button>
+                <button class="about-tab" id="tab-values" type="button" role="tab" aria-selected="false" aria-controls="panel-values" tabindex="-1">
+                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"/></svg>
+                    <span>Our Values</span>
+                </button>
             </div>
-        </section>
-
-        <section class="about-accordions" aria-label="Our company">
-            <div class="about-accordion-list">
-                <details class="about-accordion" open>
-                    <summary>Our Approach</summary>
-                    <div class="about-answer">
-                        <p>At <strong>Curry Consulting Services</strong>, we take a hands-on, collaborative approach. We work closely with clients to understand their processes, uncover opportunities, and develop custom applications, automations, and reports together. Our goal is to create solutions that deliver real value and foster long-term client relationships.</p>
-                    </div>
-                </details>
-                <details class="about-accordion">
-                    <summary>Our Mission</summary>
-                    <div class="about-answer">
-                        <p>At <strong>Curry Consulting Services</strong>, our mission is to empower businesses with innovative applications, efficient automation, and robust database strategies to <strong>enhance growth and reduce waste</strong>.</p>
-                    </div>
-                </details>
-                <details class="about-accordion">
-                    <summary>Our Values</summary>
-                    <div class="about-answer">
-                        <ul class="values-list">
-                            <li>
-                                <h3>Efficiency First</h3>
-                                <p>Every solution we build is designed to save time, reduce manual work, and deliver measurable results.</p>
-                            </li>
-                            <li>
-                                <h3>Innovation Through Simplicity</h3>
-                                <p>Powerful solutions don&rsquo;t have to be complex. Our solutions can transform businesses faster and smarter.</p>
-                            </li>
-                            <li>
-                                <h3>Data-Driven Decision Making</h3>
-                                <p>Insights drive progress. We create tools and reports that empower organizations to make confident, informed choices.</p>
-                            </li>
-                            <li>
-                                <h3>Partnership &amp; Collaboration</h3>
-                                <p>We work alongside clients as trusted partners, tailoring solutions that truly fit their business needs.</p>
-                            </li>
-                            <li>
-                                <h3>Integrity &amp; Transparency</h3>
-                                <p>We are committed to clear communication, fair pricing, and reliable delivery. Our clients always know what to expect, and we strive to build trust through every step of the process.</p>
-                            </li>
-                            <li>
-                                <h3>Continuous Growth</h3>
-                                <p>Technology evolves, and so do we. We stay ahead of the curve to bring clients the latest and greatest.</p>
-                            </li>
-                        </ul>
-                    </div>
-                </details>
+            <div class="about-panel" id="panel-approach" role="tabpanel" aria-labelledby="tab-approach" tabindex="0">
+                <p>At <strong>Curry Consulting Services</strong>, we take a hands-on, collaborative approach. We work closely with clients to understand processes, uncover opportunities, and develop custom applications, automations, and reports together. Our goal is to deliver real value and foster long-term client relationships.</p>
+            </div>
+            <div class="about-panel" id="panel-mission" role="tabpanel" aria-labelledby="tab-mission" tabindex="0" hidden>
+                <p>At <strong>Curry Consulting Services</strong>, our mission is to empower businesses with innovative applications, efficient automation, and robust database strategies to <strong>enhance growth and reduce waste</strong>.</p>
+            </div>
+            <div class="about-panel about-values-panel" id="panel-values" role="tabpanel" aria-labelledby="tab-values" tabindex="0" hidden>
+                <ul class="values-list">
+                    <li>
+                        <h3>Efficiency First</h3>
+                        <p>Save time, reduce manual work, and deliver measurable results.</p>
+                    </li>
+                    <li>
+                        <h3>Innovation Through Simplicity</h3>
+                        <p>Use straightforward solutions to make work faster and smarter.</p>
+                    </li>
+                    <li>
+                        <h3>Data-Driven Decisions</h3>
+                        <p>Turn useful insights into confident, informed choices.</p>
+                    </li>
+                    <li>
+                        <h3>Partnership &amp; Collaboration</h3>
+                        <p>Work together to create solutions that fit your business.</p>
+                    </li>
+                    <li>
+                        <h3>Integrity &amp; Transparency</h3>
+                        <p>Communicate clearly, price fairly, and deliver reliably.</p>
+                    </li>
+                    <li>
+                        <h3>Continuous Growth</h3>
+                        <p>Keep learning and evolving as technology changes.</p>
+                    </li>
+                </ul>
             </div>
         </section>
 
@@ -82,10 +82,11 @@
             <div class="founder-inner">
                 <div class="founder-copy">
                     <h2>Hi, I&rsquo;m Khristian.</h2>
-                    <p>I&rsquo;m a Virginia native with a passion for innovation and problem-solving. After earning my technical degree from <strong>Clemson University</strong>, I built a career developing automation and digital solutions that make complex systems and processes simple.</p>
+                    <p>I&rsquo;m a problem-solver with a passion for innovation. After earning my technical degree from <strong>Clemson University</strong>, I built a career developing automation and digital solutions that make complex systems and processes simple.</p>
                     <p>My experience spans modern automation tools, database systems, and digitalization platforms. I bring a versatile skillset to every project, blending technical depth with strategic thinking to create custom solutions that are effective and scalable.</p>
-                    <p>At Curry Consulting Services, my mission is simple: to empower businesses with innovative applications, efficient automation, and robust database strategies that enhance growth and reduce waste.</p>
+                    <p>At Curry Consulting Services, my mission is simple: empower businesses with innovative applications, efficient automation, and robust database strategies that enhance growth and reduce waste.</p>
                     <p class="founder-signature">Khristian Curry, founder</p>
+                    <a class="button" href="contact.html">Contact Us Today</a>
                 </div>
                 <ol class="founder-timeline" aria-label="Education and experience">
                     <li class="timeline-item">
@@ -93,12 +94,12 @@
                         <p>BS Industrial Engineering</p>
                     </li>
                     <li class="timeline-item">
-                        <h3>Automotive Manufacturing</h3>
-                        <p>5 years in production quality systems, digitalization, AI, and leadership</p>
+                        <h3>Automotive Manufacturing &amp; Digitalization</h3>
+                        <p>5 years leading software, quality, and digital transformation initiatives</p>
                     </li>
                     <li class="timeline-item">
                         <h3>Curry Consulting Services</h3>
-                        <p>Spotsylvania, VA</p>
+                        <p>Digitalization, automation, and custom software consulting</p>
                     </li>
                 </ol>
             </div>
@@ -106,10 +107,6 @@
     </main>
 
     <footer class="site-footer">
-        <div class="footer-column">
-            <h2>Location</h2>
-            <address>10808 Chatham Ridge Way<br>Spotsylvania, VA 22551</address>
-        </div>
         <div class="footer-column">
             <h2>Contact</h2>
             <a href="mailto:contact@currycs.com">contact@currycs.com</a>
