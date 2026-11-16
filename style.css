@@ -1227,12 +1227,14 @@ button:focus-visible {
     border-radius: 16px;
     background: var(--white);
     box-shadow: 0 8px 24px rgb(22 42 74 / 4%);
-    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+    transition: border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
 }
 
-.service-card:hover {
-    border-color: rgb(78 130 178 / 45%);
-    box-shadow: var(--surface-shadow);
+.service-card:hover,
+.service-card:focus-within {
+    border-color: rgb(78 130 178 / 32%);
+    background: #eaf3f9;
+    box-shadow: 0 12px 30px rgb(29 70 110 / 9%);
     transform: translateY(-5px);
 }
 
@@ -1259,15 +1261,17 @@ button:focus-visible {
     font-size: 1rem;
 }
 
-.service-card a {
-    color: var(--accent);
-    font-size: 0.92rem;
-    font-weight: 700;
-    text-decoration: none;
+.services-overview-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.75rem;
 }
 
-.service-card a:hover {
-    text-decoration: underline;
+.services-overview-cta .button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.55rem;
+    text-decoration: none;
 }
 
 .solutions {
@@ -1435,6 +1439,15 @@ button:focus-visible {
     font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
+.founder-eyebrow {
+    margin: 0 0 0.35rem;
+    color: var(--accent);
+    font-size: 0.78rem;
+    font-weight: 750;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
 .founder-copy p {
     color: var(--muted);
 }
@@ -1495,6 +1508,14 @@ button:focus-visible {
     border-radius: 16px;
     background: var(--white);
     box-shadow: 0 8px 24px rgb(22 42 74 / 4%);
+    transition: border-color 180ms ease, background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.process-step:hover {
+    border-color: rgb(78 130 178 / 32%);
+    background: #eaf3f9;
+    box-shadow: 0 12px 30px rgb(29 70 110 / 9%);
+    transform: translateY(-4px);
 }
 
 .process-icon {
@@ -1510,6 +1531,19 @@ button:focus-visible {
 .process-step p {
     color: var(--muted);
     font-size: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .service-card,
+    .process-step {
+        transition: none;
+    }
+
+    .service-card:hover,
+    .service-card:focus-within,
+    .process-step:hover {
+        transform: none;
+    }
 }
 
 .platforms-section {
@@ -2714,7 +2748,7 @@ button:focus-visible {
     color: var(--muted);
     cursor: pointer;
     font: inherit;
-    font-size: 1rem;
+    font-size: clamp(1.2rem, 1.8vw, 1.45rem);
     font-weight: 700;
     transition: border-color 160ms ease, color 160ms ease;
 }
@@ -2798,14 +2832,20 @@ button:focus-visible {
     }
 
     .about-tablist {
-        justify-content: space-between;
-        gap: 0.25rem;
+        justify-content: flex-start;
+        gap: 0.1rem;
         margin-bottom: 1rem;
     }
 
     .about-tab {
-        padding-inline: 0.4rem;
-        font-size: 0.92rem;
+        gap: 0.2rem;
+        padding-inline: 0.1rem;
+        font-size: 0.9rem;
+    }
+
+    .about-tab svg {
+        width: 0.9rem;
+        height: 0.9rem;
     }
 
     .about-panel {
