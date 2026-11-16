@@ -287,7 +287,7 @@ a {
     content: "";
 }
 
-.timeline-item:last-child::before {
+.timeline-item:first-child::before {
     border-color: var(--white);
     background: var(--white);
     box-shadow: 0 0 0 6px rgb(250 249 247 / 18%);
@@ -1233,7 +1233,7 @@ button:focus-visible {
 .service-card:hover,
 .service-card:focus-within {
     border-color: rgb(78 130 178 / 32%);
-    background: #eaf3f9;
+    background: #f3f8fc;
     box-shadow: 0 12px 30px rgb(29 70 110 / 9%);
     transform: translateY(-5px);
 }
@@ -1439,10 +1439,10 @@ button:focus-visible {
     font-size: clamp(2.5rem, 5vw, 4rem);
 }
 
-.founder-eyebrow {
+.founder-copy .founder-eyebrow {
     margin: 0 0 0.35rem;
-    color: var(--accent);
-    font-size: 0.78rem;
+    color: var(--teal);
+    font-size: clamp(1rem, 1.3vw, 1.1rem);
     font-weight: 750;
     letter-spacing: 0.12em;
     text-transform: uppercase;
@@ -1469,7 +1469,7 @@ button:focus-visible {
     background: #fffefa;
 }
 
-.timeline-item:last-child::before {
+.timeline-item:first-child::before {
     border-color: var(--teal);
     background: var(--teal);
     box-shadow: 0 0 0 6px rgb(226 184 63 / 16%);
@@ -1486,6 +1486,10 @@ button:focus-visible {
 .process-section {
     max-width: var(--content-width);
     padding: clamp(4rem, 7vw, 6rem) 1.5rem 2rem;
+}
+
+.process-section .eyebrow {
+    color: var(--accent);
 }
 
 .process-section h1,
@@ -1513,7 +1517,7 @@ button:focus-visible {
 
 .process-step:hover {
     border-color: rgb(78 130 178 / 32%);
-    background: #eaf3f9;
+    background: #f3f8fc;
     box-shadow: 0 12px 30px rgb(29 70 110 / 9%);
     transform: translateY(-4px);
 }
@@ -2334,6 +2338,9 @@ button:focus-visible {
     display: block;
     margin-bottom: 1rem;
     color: var(--accent);
+    font-family: inherit;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
 }
 
 #home.hero h1 {
@@ -2729,26 +2736,53 @@ button:focus-visible {
     padding: clamp(2.5rem, 5vw, 4rem) max(1.25rem, calc((100% - var(--content-width)) / 2));
 }
 
+.about-page-heading {
+    width: min(100%, var(--content-width));
+    margin: 0 auto clamp(2rem, 4vw, 3rem);
+}
+
+.about-page-heading .eyebrow {
+    margin-bottom: 0.8rem;
+    color: var(--accent);
+}
+
+.about-page-heading h1 {
+    max-width: 18ch;
+    margin: 0;
+    color: var(--navy);
+    font-size: clamp(2.2rem, 3.8vw, 3.5rem);
+    font-weight: 500;
+    line-height: 1.04;
+}
+
+.about-content {
+    width: min(100%, var(--content-width));
+    margin: 0 auto;
+}
+
 .about-tablist {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     max-width: var(--content-width);
-    gap: clamp(0.35rem, 1.5vw, 1.25rem);
+    gap: clamp(0.6rem, 1.5vw, 1.25rem);
     margin: 0 auto 1.4rem;
-    border-bottom: 1px solid rgb(78 130 178 / 22%);
 }
 
 .about-tab {
-    display: inline-flex;
+    display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.75rem 0.8rem 0.65rem;
-    border: 0;
+    justify-content: center;
+    gap: 0.65rem;
+    min-width: 0;
+    padding: 0.9rem 1rem;
+    border: 1px solid rgb(78 130 178 / 22%);
     border-bottom: 3px solid transparent;
-    background: transparent;
+    border-radius: 12px;
+    background: rgb(255 254 250 / 75%);
     color: var(--muted);
     cursor: pointer;
     font: inherit;
-    font-size: clamp(1.2rem, 1.8vw, 1.45rem);
+    font-size: clamp(0.9rem, 1.1vw, 1.05rem);
     font-weight: 700;
     transition: border-color 160ms ease, color 160ms ease;
 }
@@ -2765,7 +2799,9 @@ button:focus-visible {
 }
 
 .about-tab[aria-selected="true"] {
+    border-color: rgb(78 130 178 / 32%);
     border-bottom-color: var(--teal);
+    background: #edf5fb;
     color: var(--navy);
 }
 
@@ -2780,7 +2816,7 @@ button:focus-visible {
 
 .about-panel {
     width: min(100%, var(--content-width));
-    min-height: 11rem;
+    min-height: 0;
     margin: 0 auto;
     padding: clamp(1.4rem, 3vw, 2rem);
     border: 1px solid rgb(29 70 110 / 12%);
@@ -2794,7 +2830,7 @@ button:focus-visible {
 }
 
 .about-panel > p {
-    max-width: 70ch;
+    max-width: none;
     margin: 0;
     color: var(--muted);
     font-size: clamp(1.05rem, 1.5vw, 1.2rem);
@@ -2821,6 +2857,14 @@ button:focus-visible {
 }
 
 @media (max-width: 900px) {
+    .about-page-heading {
+        max-width: 42rem;
+    }
+
+    .about-page-heading h1 {
+        max-width: 20ch;
+    }
+
     .about-values-panel .values-list {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -2832,20 +2876,20 @@ button:focus-visible {
     }
 
     .about-tablist {
-        justify-content: flex-start;
-        gap: 0.1rem;
+        gap: 0.45rem;
         margin-bottom: 1rem;
     }
 
     .about-tab {
-        gap: 0.2rem;
-        padding-inline: 0.1rem;
-        font-size: 0.9rem;
+        flex-direction: column;
+        gap: 0.35rem;
+        padding: 0.65rem 0.3rem;
+        font-size: 0.82rem;
     }
 
     .about-tab svg {
-        width: 0.9rem;
-        height: 0.9rem;
+        width: 1.05rem;
+        height: 1.05rem;
     }
 
     .about-panel {
